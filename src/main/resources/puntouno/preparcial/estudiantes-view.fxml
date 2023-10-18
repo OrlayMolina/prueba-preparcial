@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puntouno.preparcial.controller.EstudiantesViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="60.0" layoutX="7.0" layoutY="94.0" stroke="#b2acac" strokeType="INSIDE" width="584.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="76.0" layoutX="7.0" layoutY="11.0" stroke="#b2acac" strokeType="INSIDE" width="584.0" />
+      <GridPane layoutX="14.0" layoutY="14.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="155.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="155.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="155.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código" />
+            <Label text="Nombre" GridPane.columnIndex="2" />
+            <Label text="Nota" GridPane.columnIndex="4" />
+            <TextField fx:id="txfCodigo" prefHeight="55.0" prefWidth="155.0" GridPane.rowIndex="2" />
+            <TextField fx:id="txfNombre" prefHeight="93.0" prefWidth="155.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="txfNota" prefHeight="83.0" prefWidth="155.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="127.0" layoutY="111.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#agregarEstudiante" prefHeight="56.0" prefWidth="80.0" text="Agregar" />
+            <Button mnemonicParsing="false" onAction="#cancelarFiltro" prefHeight="61.0" prefWidth="80.0" text="Cancelar" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" onAction="#buscarEstudiante" prefHeight="76.0" prefWidth="80.0" text="Buscar" GridPane.columnIndex="4" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tableEstudiantes" layoutX="9.0" layoutY="162.0" prefHeight="231.0" prefWidth="584.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="colNombre" prefWidth="262.0" text="Nombre" />
+            <TableColumn fx:id="colNota" prefWidth="246.0" text="Nota" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

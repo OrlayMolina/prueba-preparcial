@@ -1,0 +1,4 @@
+oct. 17, 2023 3:44:23 P. M. puntouno.preparcial.util.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: Agregar estudiante,Estudiante agregado,2023-10-17
+oct. 17, 2023 3:44:41 P. M. puntouno.preparcial.util.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: Agregar estudiante,Estudiante agregado,2023-10-17
